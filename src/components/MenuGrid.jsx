@@ -1,8 +1,6 @@
 import React from "react";
 import Card from "./Card";
 import menu from "../data/menu";
-import Espresso from './assets/Espresso.jpg';
-import pizza from './assets/pizza.jpg'
 
 export default function MenuGrid(){
   return (

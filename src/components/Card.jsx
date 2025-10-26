@@ -1,6 +1,4 @@
 import React from "react";
-import Espresso from './assets/Espresso.jpg';
-import pizza from './assets/pizza.jpg'
 
 export default function Card({ item }) {
   return (
