@@ -1,0 +1,99 @@
+/* layout */
+.container{max-width:var(--max-width);margin:0 auto;padding:0 1rem;}
+.app{background:var(--bg);min-height:100vh;color:#111}
+
+/* NAV */
+.nav{position:sticky;top:0;backdrop-filter: blur(6px);z-index:10;background:rgba(255,255,255,0.6)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
+.logo{font-weight:700}
+.logo .accent{color:var(--accent)}
+
+/* hero */
+.hero{padding:2.5rem 0}
+.hero-inner{display:flex;flex-direction:column;gap:1.25rem;align-items:center}
+.hero-text{max-width:540px}
+.hero-image img{width:260px;border-radius:18px;object-fit:cover;}
+
+/* Grid */
+.menu .grid{display:grid;gap:1rem;grid-template-columns:1fr}
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+.card-media img{width:100%;height:180px;object-fit:cover}
+.card-body{padding:0.75rem}
+
+/* Buttons */
+.btn{border:0;padding:0.65rem 0.9rem;border-radius:10px;cursor:pointer}
+.btn.primary{background:var(--accent);color:white}
+.btn.outline{background:transparent;border:1px solid #ddd}
+
+/* small */
+.btn.small{padding:0.4rem 0.6rem}
+
+/* hover effect (pure CSS) */
+.hover-elevate{transform:translateY(0);transition:transform .28s cubic-bezier(.2,.8,.2,1), box-shadow .28s}
+.hover-elevate:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,0.12)}
+
+/* Responsive: tablet & up */
+@media(min-width:720px){
+  .hero-inner{flex-direction:row;justify-content:space-between}
+  .menu .grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* Desktop */
+@media(min-width:1000px){
+  .menu .grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* APPEAR ANIMATIONS (pure CSS, GPU-accelerated transforms & opacity) */
+.appear-up{
+  transform: translateY(18px);
+  opacity:0;
+  animation:appearUp .6s forwards cubic-bezier(.2,.9,.3,1);
+}
+.appear-right{
+  transform: translateX(18px);
+  opacity:0;
+  animation:appearRight .6s forwards cubic-bezier(.2,.9,.3,1);
+}
+.delay-1{animation-delay:0.12s}
+.delay-2{animation-delay:0.24s}
+
+/* Keyframes */
+@keyframes appearUp{
+  to{transform:translateY(0);opacity:1}
+}
+@keyframes appearRight{
+  to{transform:translateX(0);opacity:1}
+}
+
+/* Accessibility & small devices */
+@media(max-width:420px){
+  .hero-image img{width:200px}
+  .nav-links{display:none}
+  .hamburger{display:block}
+}
+
+/* prefer-reduced-motion support */
+@media (prefers-reduced-motion: reduce){
+  .appear-up, .appear-right, .hover-elevate { animation: none; transition: none; }
+}
+a{
+    text-decoration: none;
+}
+.nav-links{
+    display: inline-flex;
+    gap: 1.6em;
+    align-items: center;
+}
+.nav-links button{
+    border-radius: 5px;
+    padding: 6px;
+    border: none;
+    outline: none;
+    background-color: cyan;
+    color: tomato;
+    cursor: pointer;
+}
+.nav-links button:hover{
+    background-color: lightcyan;
+    color: tomato;
+}
