@@ -13,7 +13,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="hero-image appear-right">
-          <img src="/src/assets/itallianCoffe.jpg" alt="Italian coffee" loading="lazy" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPXYaZ0GB5tWk4VO93M7GK020GyEIK_oqkUQ&s" alt="Italian coffee" loading="lazy" />
         </div>
       </div>
     </section>
