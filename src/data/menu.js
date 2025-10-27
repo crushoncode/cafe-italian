@@ -11,7 +11,7 @@ const menu = [
     name: "Margherita",
     description: "Classic pizza with fresh basil.",
     price: 399,
-    image: "https://i.pinimg.com/736x/5a/21/84/5a2184cf3268f5321481f506ffaceaf7.jpg"
+    image: "https://st.depositphotos.com/1177973/2397/i/450/depositphotos_23970469-stock-photo-girl-housewife-with-delicious-pizza.jpg"
   },
   
 ];
